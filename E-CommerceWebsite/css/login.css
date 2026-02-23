@@ -1,0 +1,172 @@
+/* css/login.css */
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    /* Modern Gradient Background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* Glassmorphism base */
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 380px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ddd;
+    /* Thicker border */
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 1rem;
+    font-family: 'Lato', Arial, sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Fix padding issue */
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #e73c7e;
+    /* Match gradient */
+    background: #fff;
+    box-shadow: 0 0 8px rgba(231, 60, 126, 0.2);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #e73c7e, #ee7752);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(231, 60, 126, 0.4);
+}
+
+.login-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 60, 126, 0.6);
+}
+
+.login-container button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.login-container .error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.login-container p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.login-container a {
+    color: #e73c7e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.login-container a:hover {
+    color: #c2185b;
+    text-decoration: underline;
+}
+
+/* Spinner */
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    vertical-align: middle;
+    margin-left: 10px;
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,67 @@
+/* css/footer.css */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+#containerFooter {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ccc;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    font-size: 14px;
+    padding: 60px 10%;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+#containerFooter h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#containerFooter p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#containerFooter p:hover {
+    color: #e73c7e;
+}
+
+#credit {
+    width: 100%;
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+    border-top: 1px solid #333;
+}
+
+#credit a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    #containerFooter {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 5%;
+    }
+}
+
+@media(max-width: 500px) {
+    #containerFooter {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

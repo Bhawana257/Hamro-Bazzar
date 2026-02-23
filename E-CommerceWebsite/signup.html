@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - E-Commerce Website</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Sign Up</h2>
+        <div class="error" id="errorMsg">Registration failed</div>
+        <form id="signupForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" id="signupBtn">Sign Up <span class="spinner" id="spinner"></span></button>
+        </form>
+        <p style="text-align: center; margin-top: 1rem;">
+            Already have an account? <a href="login.html">Login here</a>
+        </p>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

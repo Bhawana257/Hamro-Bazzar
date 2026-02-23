@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Hamro Bazzar</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        #profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .user-info {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            background: #f9f9f9;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+        }
+
+        .order-items {
+            padding: 10px;
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .order-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+
+        .order-footer {
+            text-align: right;
+            font-weight: bold;
+            color: #037a7a;
+            padding-top: 10px;
+        }
+
+        .status {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .status.Placed {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <div id="profile-container">
+        <h1>My Profile</h1>
+        <div class="user-info">
+            <img id="user-avatar" src="" alt="User Avatar"
+                style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ddd; margin-bottom: 15px;">
+            <h2 id="username-display">Loading...</h2>
+            <p id="email-display">Loading...</p>
+            <button id="logoutBtn"
+                style="background-color: #ff4444; width: auto; padding: 8px 15px; margin-top: 10px;">Logout</button>
+        </div>
+
+        <h2>Order History</h2>
+        <div id="orders-container">
+            <p>Loading orders...</p>
+        </div>
+    </div>
+
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

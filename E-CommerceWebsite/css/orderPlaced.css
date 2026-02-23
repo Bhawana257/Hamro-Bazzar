@@ -1,0 +1,55 @@
+/* css/orderPlaced.css */
+#orderContainer {
+    font-family: 'Lato', sans-serif;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+#check {
+    margin-bottom: 20px;
+}
+
+#orderContainer i {
+    color: #28a745;
+    font-size: 8em;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#aboutCheck h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#aboutCheck p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Responsive */
+@media(max-width: 700px) {
+    #orderContainer i {
+        font-size: 6em;
+    }
+
+    #aboutCheck h1 {
+        font-size: 1.5em;
+    }
+}
